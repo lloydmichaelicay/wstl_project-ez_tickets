@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EZ Tickets</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/seating-styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Side - Seat Plan Image -->
+        <div class="left">
+            <img src="seat-plan.jpg" alt="Arena Seat Plan">
+        </div>
+
+        <!-- Right Side - Reservation Options -->
+        <div class="right">
+            <h2>Concert Seating Reservation</h2>
+            <div class="form-group">
+                <label for="location">Location</label>
+                <select id="location" onchange="updatePrice()">
+                    <option value="svip" data-price="4490">SVIP</option>
+                    <option value="vip" data-price="3950">VIP</option>
+                    <option value="lower-box-a" data-price="2950">Lower Box A</option>
+                    <option value="lower-box-b" data-price="2350">Lower Box B</option>
+                    <option value="upper-box" data-price="1650">Upper Box</option>
+                    <option value="general-admission" data-price="690">General Admission</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="section">Section</label>
+                <select id="section" onchange="updatePrice()">
+                    <option value="101">101</option>
+                    <option value="102">102</option>
+                    <option value="103">103</option>
+                    <!-- Add more sections as needed -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="quantity">Quantity</label>
+                <input type="number" id="quantity" min="1" max="10" value="1" onchange="updatePrice()">
+            </div>
+            <div class="price-display">
+                Total Price: ₱<span id="total-price">4,490.00</span>
+            </div>
+            <button class="btn">Select Seats</button>
+        </div>
+    </div>
+
+    <script src="js/seating.js"></script>
+</body>
+</html>

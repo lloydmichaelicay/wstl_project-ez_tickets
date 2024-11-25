@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Signup - EZ Tickets</title>
+    <link rel="stylesheet" href="css/login-styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo-title-container">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="EZ Tickets Logo"></a>
+            </div>
+            <div class="title">
+                <b>EZ Tickets</b>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="venues.html">Event Venues</a></li>
+                <li><a href="https://www.facebook.com/philippineconcerts" target="_blank">News</a></li>
+                <li><a href="">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="subheader">
+        <nav>
+            <ul>
+                <li><a href="concert.html">Concerts</a></li>
+                <li><a href="sports.html">Sports</a></li>
+                <li><a href="theatre-arts.html">Theatre Arts</a></li>
+            </ul>
+        </nav>
+        <div class="search">
+            <input type="text" placeholder="Search events">
+            <button>Search</button>
+            <a href="login.html" class="button">Login / Signup</a>
+        </div>
+    </div>
+
+    <br><br>
+    <div class="featured">
+        <h1>Login or Signup</h1> 
+        <h1>to continue your purchase</h1>
+        </div>
+    
+    <main>
+        <div class="container">
+            <div class="form-container">
+                <div class="form-toggle">
+                    <button id="loginBtn" onclick="toggleForm('login')">Login</button>
+                    <button id="signupBtn" onclick="toggleForm('signup')">Sign Up</button>
+                </div>
+                
+                <form id="loginForm" class="form" action="signin.php" method="post">
+                    <h2>Login</h2>
+                    <br>
+                    Email<input type="email" placeholder="Email" name="email" id="email" required>
+                    Password<input type="password" placeholder="Password" name="password" id="password" required>
+                    <button type="submit" class="submit-btn">Sign In</button>
+                    <a href="#" class="forgot-link">Forgot Password?</a>
+                </form>
+                
+                
+                <form id="signupForm" class="form hidden" action="signup.php" method="post">
+                    <h2>Sign Up</h2>
+                    <br>
+                    First name <input type="text" placeholder="First Name" name="first_name" id="first_name" required>
+                    Last Name <input type="text" placeholder="Last Name" name="last_name" id="last_name" required>
+                    Age <input type="number"  placeholder="Age" min="7" max="59" name="age" id="age" required>
+                    <div class="gender-radio">
+                        Gender <p></p><br>
+                        <label for="male" class="radio-inline">
+                            <input type="radio" name="gender" value="m" id="male"> Male
+                        </label>
+                        <label for="female" class="radio-inline">
+                            <input type="radio" name="gender" value="f" id="female" required> Female
+                        </label>
+                        <label for="non-binary" class="radio-inline">
+                            <input type="radio" name="gender" value="o" id="non-binary"> Non-Binary
+                        </label>    
+                    </div><br>
+                    Email <input type="email" placeholder="Email" name="email" id="email" required>
+                    Input Password<input type="password" placeholder="Password" name="password" id="password" required>
+                    Confirm Password<input type="password" placeholder="Confirm Password" name="confirm_password" id="confirm_password"required>
+                    <button type="submit" class="submit-btn">Register</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/login-script.js"></script>
+    <footer>
+        <p>&copy; 2024 EZ Tickets. All rights reserved.</p>
+    </footer>
+</body>
+</html>
