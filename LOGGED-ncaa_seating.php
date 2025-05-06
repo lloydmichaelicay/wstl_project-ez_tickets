@@ -48,7 +48,7 @@ $conn->close();
         </ul>
     </nav>
 </header>
-    <div class="subheader">
+    <div class="subheader"> 
         <nav>
             <ul>
                 <li><a href="LOGGED-concert.php">Concerts</a></li>
@@ -59,12 +59,12 @@ $conn->close();
         <div class="search">
             <input type="text" placeholder="Search events">
             <button>Search</button>
-            <a href="login.html" class="button">Logout</a>
+            <a href="db_logout.php" class="button">Logout</a> 
         </div>
     </div>
 
     <main>
-
+ 
         <div class="container">
             <!-- Left Side - Seat Plan Image -->
             <div class="left">
@@ -72,38 +72,51 @@ $conn->close();
             </div>
 
         <div class="right">
-            <h2>NCAA 100 Basketball Grand Finals</h2>
-            <h3>November 30, 2024 | FILOIL ECOOIL CENTER</h3>
+            <h2>NCAA 100 Volleyball Game</h2>
+            <h3>LPU vs Benilde (May 2025 | FILOIL ECOOIL CENTER)</h3>
             <br>
-            <div class="form-group">
+            <form action="db_seating.php" method="POST"> 
+                <div class="form-group">
+                    <label for="name">Event Name</label>
+                    <select id="event_name" name="event_name" required>
+                        <option>NCAA Volleyball LPU vs Benilde</option>
+                    </select>
+                </div>
+            
+                <div class="form-group">
                 <label for="location">Section</label>
-                <select id="location" onchange="filterSections()" required>
-                    <option value="" disabled selected hidden>Select Location</option> <!-- Faded default option -->
-                    <option value="ringside-a" data-price="500">Ringside A</option>
-                    <option value="ringside-b" data-price="500">Ringside B</option>
-                    <option value="lowerbox" data-price="150">Lowerbox</option>
-                    <option value="upper-box" data-price="100">Upper Box</option>
-                </select>
-            </div> 
-            <div class="form-group">
+                    <select id="location" name="seat_section" onchange="filterSections()" required>
+                        <option value="" disabled selected hidden>Select Location</option>
+                        <option value="filoil-ringside-a" data-price="500">Ringside A</option>
+                        <option value="filoil-ringside-b" data-price="500">Ringside B</option>
+                        <option value="filoil-lower-box" data-price="200">Lowerbox</option>
+                        <option value="filoil-upper-box" data-price="100">Upper Box</option>
+                    </select>
+                </div> 
+                
+                <div class="form-group">
                 <label for="section">Section Number</label>
-                <select id="section" required>
-                    <!-- Nasa JS na yung sections and will be shown dynamically -->
-                </select>
-            </div>
-            
-            <div class="form-group">
-                <label for="quantity">Quantity</label>
-                <input type="number" id="quantity" min="1" max="5" step="1" value="1" onchange="validateQuantity(); updatePrice()">
-            </div>
-            
-            <div class="price-display">
-                Total Price: ₱<span id="total-price">0.00</span>
-            </div>
-            
-            <a href="">
-                <button class="btn">Proceed to Checkout</button>
-            </a>
+                    <select id="section" name="section_number" required>
+                        <!-- Nasa JS na yung sections and will be shown dynamically -->
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="quantity">Quantity (5 tickets only per account)</label>
+                    <input type="number" name="ticket_quantity" id="quantity" min="1" max="5" step="1" value="1" onchange="validateQuantity(); updatePrice()">
+                </div>
+                
+                <div class="price-display">
+                    Total Price: ₱<span id="total-price">0.00</span> + 2% Service Charge
+                </div>
+                
+                <a href=""> 
+                    <button class="btn">Reserve Tickets</button>
+                </a>
+
+                <!-- Hidden input to store calculated price -->
+                <input type="hidden" id="calculated-price" name="total_price">
+            </form> 
         </div>
     </main>
 

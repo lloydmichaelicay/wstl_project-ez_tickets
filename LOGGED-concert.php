@@ -7,7 +7,7 @@ if (!isset($_SESSION['id'])) {
 }
 
 $user_id = $_SESSION['id'];
-$conn = new mysqli('localhost', 'root', '', 'ez_tickets');
+$conn = new mysqli('localhost', 'root', '', 'ez_tickets'); 
 
 $sql = "SELECT first_name, last_name FROM user_account WHERE id = ?";
 $stmt = $conn->prepare($sql);
@@ -60,7 +60,7 @@ $conn->close();
         <div class="search">
             <input type="text" placeholder="Search events">
             <button>Search</button>
-            <a href="login.html" class="button">Logout</a>
+            <a href="db_logout.php" class="button">Logout</a>
         </div>
     </div>
     

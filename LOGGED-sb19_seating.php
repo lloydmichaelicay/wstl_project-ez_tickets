@@ -25,9 +25,10 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EZ Tickets</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="css/Cseating-styles.css">
 </head>
-<body>
+<body> 
     <header>
         <div class="logo-title-container">
             <div class="logo">
@@ -36,7 +37,8 @@ $conn->close();
             <div class="title">
                 <b>EZ Tickets</b>
             </div>
-        </div>
+        </div> 
+        <h2 style="color:#ddd">Welcome, <?php echo htmlspecialchars($first_name . " " . $last_name); ?>!</h2>
         <nav>
             <ul>
                 <li><a href="index.php">Home</a></li>
@@ -46,7 +48,6 @@ $conn->close();
             </ul>
         </nav>
     </header>
-    
     <div class="subheader">
         <nav>
             <ul>
@@ -58,55 +59,66 @@ $conn->close();
         <div class="search">
             <input type="text" placeholder="Search events">
             <button>Search</button>
-            <a href="login.html" class="button">Logout</a>
+            <a href="db_logout.php" class="button">Logout</a>
         </div>
     </div>
-    
+
     <main>
+
         <div class="container">
             <!-- Left Side - Seat Plan Image -->
             <div class="left">
-                <img src="images/ts_seating.jpg" alt="NFT Event Seat Plan">
+                <img src="images/sb19_seatingg.png" alt="Arena Seat Plan">
             </div>
 
-            <!-- Right Side - Seat Selection -->
-            <div class="right">
-                <h2>The Script Satellites World Tour</h2>
-                <h3>February 11, 2025 | SMART ARANETA COLISEUM</h3>
-                <br>
+        <div class="right">
+        <h2>SB19 Simula at Wakas World Tour</h2>
+            <h3>June 01, 2025 | PHILIPPINE ARENA</h3>
+            <br>
+            <form action="db_seating.php" method="POST"> 
                 <div class="form-group">
-                    <label for="location">Section</label>
-                    <select id="location" onchange="filterSections()" required>
-                        <option value="" disabled selected hidden>Select Section</option> <!-- Faded default option -->
-                        <option value="ts-vip" data-price="9500">VIP</option>
-                        <option value="ts-patron-a" data-price="8500">Patron A</option>
-                        <option value="ts-patron-b" data-price="7500">Patron B</option>
-                        <option value="ts-lower-box-a" data-price="5500">Lower Box A</option>
-                        <option value="ts-lower-box-b" data-price="4500">Lower Box B</option>
-                        <option value="ts-upper-box" data-price="2500">Upper Box</option>
-                        <option value="ts-gen-ad" data-price="1200">General Admission</option>
+                    <label for="name">Event Name</label>
+                    <select id="event_name" name="event_name" required>
+                        <option>SB19 World Tour Philippines</option>
                     </select>
                 </div>
                 <div class="form-group">
+                <label for="location">Section</label> 
+                    <select id="location" name="seat_section" onchange="filterSections()" required>
+                        <option value="" disabled selected hidden>Select Section</option> <!-- Faded default option -->
+                        <option value="sb19-vip-standing-mosh" data-price="15000">VIP Standing Mosh Pit</option>
+                        <option value="sb19-vip-standing" data-price="10500">VIP Standing</option>
+                        <option value="sb19-vip-seating" data-price="11000">VIP Seating</option>
+                        <option value="sb19-lba-p" data-price="7500">LBA Premium</option>
+                        <option value="sb19-lba-r" data-price="6250">LBA Regular</option>
+                        <option value="sb19-lbb-p" data-price="4750">LBB Premium</option>
+                        <option value="sb19-lbb-r" data-price="3500">LBB Regular</option>
+                        <option value="sb19-ub-a" data-price="2250">Upper Box A</option>
+                        <option value="sb19-ubb-ga" data-price="1000">UBB / Gen Ad</option>
+                    </select>
+                </div>  
+                <div class="form-group">
                     <label for="section">Section Number</label>
-                    <select id="section" required>
+                    <select id="section" name="section_number" required>
                         <!-- Nasa JS na yung sections and will be shown dynamically -->
                     </select>
                 </div>
 
                 <div class="form-group">
-                    <label for="quantity">Quantity</label>
-                    <input type="number" id="quantity" min="1" max="5" step="1" value="1" onchange="validateQuantity(); updatePrice()">
+                    <label for="quantity">Quantity (5 tickets only per account)</label>
+                    <input type="number" name="ticket_quantity" id="quantity" min="1" max="5" step="1" value="1" onchange="validateQuantity(); updatePrice()">
                 </div>
                 
                 <div class="price-display">
-                    Total Price: ₱<span id="total-price">0.00</span>
+                    Total Price: ₱<span id="total-price">0.00</span> + 2% Service Charge
                 </div>
-                
                 <a href="">
-                    <button class="btn">Proceed to Checkout</button>
+                    <button class="btn">Reserve Tickets</button>
                 </a>
-            </div>
+
+                <!-- Hidden input to store calculated price -->
+                <input type="hidden" id="calculated-price" name="total_price">
+            </form>
         </div>
     </main>
 
@@ -115,4 +127,5 @@ $conn->close();
         <p>&copy; 2024 EZ Tickets. All rights reserved.</p>
     </footer>
 </body>
+
 </html>

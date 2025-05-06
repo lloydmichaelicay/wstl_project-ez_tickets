@@ -60,7 +60,7 @@ $conn->close();
         <div class="search">
             <input type="text" placeholder="Search events">
             <button>Search</button>
-            <a href="login.html" class="button">Logout</a>
+            <a href="db_logout.php" class="button">Logout</a> 
         </div>
     </div>
     

@@ -1,0 +1,227 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between; /* Space between left and right sections */
+    align-items: center; /* Vertically centers logo and title */
+    background-color: #003366;
+    padding: 10px 20px;
+}
+
+header .logo-title-container {
+    display: flex;
+    align-items: center; /* Vertically centers logo and title */
+}
+
+header .logo img {
+    width: 45px;
+    margin-right: 10px;
+}
+
+.title {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    color: #ddd;
+    margin: 0;
+}
+
+header nav {
+    display: flex;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+header nav ul li a:hover {
+    color: #ddd;
+}
+
+
+
+
+
+
+
+.subheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #5d6d7e;
+    padding: 10px 20px;
+}
+
+.subheader nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.subheader nav ul li {
+    margin-left: 20px;
+}
+
+.subheader nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.subheader .search {
+    display: flex;
+    align-items: center;
+}
+
+.subheader .search input[type="text"] {
+    padding: 5px;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.subheader .search button, .subheader .search a.button {
+    padding: 5px 10px;
+    background-color: #003366;
+    color: white;
+    text-decoration: none;
+    border: none;
+    margin-left: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.subheader .search button:hover, .subheader .search a.button:hover {
+    background-color: #2986cc;
+}
+
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+ 
+.container {
+    display: flex;
+    width: 90vw; /* Adjust width to 90% of viewport width */
+    height: 90vh; /* Adjust height to 90% of viewport height */
+    background-color: #ffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    overflow: hidden;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.left {
+    width: 60%;
+    background-color:#99a3a4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left img {
+    max-width: 100%;
+    height:fit-content;
+    border-radius: 15px;
+}
+
+.confirm {
+    width: 60%;
+    background-color:#99a3a4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.confirm img {
+    max-width: 100%;
+    height:fit-content;
+    border-radius: 10px;
+}
+
+.right {
+    width: 40%;
+    padding: 30px; /* Adjust padding to make the form look larger */
+}
+
+.right h2 {
+    font-size: 28px; /* Increase heading size */
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px; /* Increase margin for better spacing */
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+select, input[type="number"] {
+    width: 100%;
+    padding: 12px; /* Increase input size */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+.price-display {
+    margin-top: 20px;
+    font-size: 20px; /* Increase font size for price */
+    font-weight: bold;
+    color: #333;
+}
+
+
+.actions {
+    display: flex; /* Use flexbox to align buttons */
+    gap: 10px; /* Add spacing between buttons */
+}
+
+
+.btn {
+    display: inline-block;
+    width: auto;
+    padding: 10px 20px;
+    margin-top: 25px;
+    background-color: #003366;
+    color: white;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}

@@ -6,7 +6,7 @@ if (!isset($_SESSION['id'])) {
     exit();
 }
 
-$user_id = $_SESSION['id'];
+$user_id = $_SESSION['id']; 
 $conn = new mysqli('localhost', 'root', '', 'ez_tickets');
 
 $sql = "SELECT first_name, last_name FROM user_account WHERE id = ?";
@@ -18,7 +18,7 @@ $stmt->fetch();
 $stmt->close();
 $conn->close();
 ?>
-
+ 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,14 +32,14 @@ $conn->close();
     <header>
         <div class="logo-title-container">
             <div class="logo">
-                <img src="images/logo.png" alt="EZ Tickets Logo">
+                <a href="index.html"><img src="images/logo.png" alt="EZ Tickets Logo"></a>
             </div>
             <div class="title">
                 <b>EZ Tickets</b>
             </div>
         </div>
         <h2 style="color:#ddd">Welcome, <?php echo htmlspecialchars($first_name . " " . $last_name); ?>!</h2>
-        <nav>
+        <nav> 
             <ul>
                 <li><a href="index.php">Home</a></li>
                 <li><a href="LOGGED-venues.php">Event Venues</a></li>
@@ -48,7 +48,6 @@ $conn->close();
             </ul>
         </nav>
     </header>
-    
     <div class="subheader">
         <nav>
             <ul>
@@ -60,67 +59,69 @@ $conn->close();
         <div class="search">
             <input type="text" placeholder="Search events">
             <button>Search</button>
-            <a href="login.html" class="button">Logout</a>
+            <a href="db_logout.php" class="button">Logout</a> 
         </div>
     </div>
-    
+ 
     <main>
+
         <div class="container">
             <!-- Left Side - Seat Plan Image -->
             <div class="left">
-                <img src="images/gv_seatingN.jpg" alt="Philippine Arena Seat Plan">
+                <img src="images/jokoy_seating.png" alt="Arena Seat Plan">
             </div>
-
-            <div class="right">
-                <h2>Gary V. One More Time</h2>
-                <h3>December 20 and 22, 2024 | SMART ARANETA COLISEUM</h3>
-                <br>
-
-                <div class="form-group">
-                    <label for="date">Select Date</label>
-                    <select id="date" required>
-                        <option value="" disabled selected hidden>Date</option> <!-- Faded default option -->
-                        <option value="date1">December 20, Friday</option>
-                        <option value="date2">December 22, Sunday</option>
-                    </select>
-                </div>
+ 
+        <div class="right">
+            <h2>Jo Koy Just Being KOY Tour</h2>
+            <h3>June 21, 2025 | SM MALL OF ASIA ARENA</h3>
+            <br>
+            <form action="db_seating.php" method="POST">
                 <div class="form-group">
                     <label for="location">Section</label>
-                    <select id="location" onchange="filterSections()" required>
+                    <select id="location" name="seat_section" onchange="filterSections()" required>
                         <option value="" disabled selected hidden>Select Section</option> <!-- Faded default option -->
-                        <option value="gv-platinum" data-price="15000">Platinum</option>
-                        <option value="gv-vip" data-price="12500">VIP</option>
-                        <option value="gv-patron" data-price="10000">Patron</option>
-                        <option value="gv-lower-box-a" data-price="6000">Lower Box A</option>
-                        <option value="gv-lower-box-b" data-price="5000">Lower Box B</option>
-                        <option value="gv-upper-box" data-price="2000">Upper Box</option>
-                        <option value="gv-gen-ad" data-price="750">General Admission</option>
+                        <option value="jokoy-floor-seating" data-price="7500">Floor Seating</option>
+                        <option value="jokoy-patron" data-price="7000">Patron</option>
+                        <option value="jokoy-lba-premium" data-price="6500">LBA Premium</option>
+                        <option value="jokoy-patron-center" data-price="6000">Patron Center</option>
+                        <option value="jokoy-lba-regular" data-price="5500">LBA Regular</option>
+                        <option value="jokoy-lbb-premium" data-price="5000">LBB Premium</option>
+                        <option value="jokoy-lbb-regular" data-price="4500">LBB Regular</option>
+                        <option value="jokoy-ub-premium" data-price="3000">Upper Box Premium</option>
+                        <option value="jokoy-ub-regular" data-price="2500">Upper Box Regular</option>
+                        <option value="jokoy-general-admission" data-price="1500">General Admission</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="section">Section Number</label>
-                    <select id="section" required>
+                    <label for="section">Row</label>
+                    <select id="section" name="section_number" required>
                         <!-- Nasa JS na yung sections and will be shown dynamically -->
                     </select>
                 </div>
+
                 <div class="form-group">
                     <label for="quantity">Quantity</label>
-                    <input type="number" id="quantity" min="1" max="5" step="1" value="1" onchange="validateQuantity(); updatePrice()">
-                </div>
-                <div class="price-display">
-                    Total Price: ₱<span id="total-price">0.00</span>
+                    <input type="number" name="ticket_quantity" id="quantity" min="1" max="5" step="1" value="1" onchange="validateQuantity(); updatePrice()">
                 </div>
                 
+                <div class="price-display">
+                    Total Price: ₱<span id="total-price">0.00</span> + 2% Service Charge
+                </div>
+
                 <a href="">
-                    <button class="btn">Proceed to Checkout</button>
+                    <button class="btn">Reserve Tickets</button>
                 </a>
-            </div>
+
+                <!-- Hidden input to store calculated price -->
+                <input type="hidden" id="calculated-price" name="total_price">
+            </form>
         </div>
     </main>
 
-    <script src="js/concert_seating.js"></script>
+    <script src="js/theater_seating.js"></script>
     <footer>
         <p>&copy; 2024 EZ Tickets. All rights reserved.</p>
     </footer>
 </body>
+
 </html>

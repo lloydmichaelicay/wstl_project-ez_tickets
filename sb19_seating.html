@@ -7,8 +7,8 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="css/Cseating-styles.css">
 </head>
-<body>
-    <header>
+<body> 
+    <header> 
         <div class="logo-title-container">
             <div class="logo">
                 <a href="index.html"><img src="images/logo.png" alt="EZ Tickets Logo"></a>
@@ -42,30 +42,35 @@
     </div>
 
     <main>
-  
+
         <div class="container">
             <!-- Left Side - Seat Plan Image -->
             <div class="left">
-                <img src="images/psc_seatingN.png" alt="Arena Seat Plan">
-            </div>
+                <img src="images/sb19_seatingg.png" alt="Arena Seat Plan">
+            </div> 
 
         <div class="right">
-            <h2>EASL Manila: Beermen vs HK Eastern</h2>
-            <h3>January 15, 2025 | PHILSPORTS ARENA</h3>
+            <h2>SB19 Simula at Wakas World Tour</h2>
+            <h3>June 01, 2025 | PHILIPPINE ARENA</h3>
             <br>
             <div class="form-group">
                 <label for="location">Section</label>
                 <select id="location" onchange="previewSections(); pricePreview();" required>
                     <option value="" disabled selected hidden>Select Section</option> <!-- Faded default option -->
-                    <option value="psa-courtside" data-price="5300">Courtside</option>
-                    <option value="psa-patron" data-price="530">Patron</option>
-                    <option value="psa-lower-box" data-price="370">Lower Box</option>
-                    <option value="psa-upper-box" data-price="170">Upper Box</option>
+                    <option value="sb19-vip-standing-mosh" data-price="15000">VIP Standing Mosh Pit</option>
+                    <option value="sb19-vip-standing" data-price="10500">VIP Standing</option>
+                    <option value="sb19-vip-seating" data-price="11000">VIP Seating</option>
+                    <option value="sb19-lba-p" data-price="7500">LBA Premium</option>
+                    <option value="sb19-lba-r" data-price="6250">LBA Regular</option>
+                    <option value="sb19-lbb-p" data-price="4750">LBB Premium</option>
+                    <option value="sb19-lbb-r" data-price="3500">LBB Regular</option>
+                    <option value="sb19-ub-a" data-price="2250">Upper Box A</option>
+                    <option value="sb19-ubb-ga" data-price="1000">UBB / Gen Ad</option>
                 </select>
-            </div> 
+            </div>  
             <div class="form-group">
                 <label for="section">Section Number</label>
-                <select id="section" required>
+                <select id="section">
                     <!-- Nasa JS na yung sections and will be shown dynamically -->
                 </select>
             </div>
@@ -79,7 +84,7 @@
         </div>
     </main>
 
-    <script src="js/sports_seating.js"></script>
+    <script src="js/concert_seating.js"></script>
     <footer>
         <p>&copy; 2024 EZ Tickets. All rights reserved.</p>
     </footer>

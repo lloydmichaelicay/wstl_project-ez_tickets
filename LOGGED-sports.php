@@ -17,7 +17,7 @@ $stmt->bind_result($first_name, $last_name);
 $stmt->fetch();
 $stmt->close();
 $conn->close();
-?>
+?> 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -60,7 +60,7 @@ $conn->close();
         <div class="search">
             <input type="text" placeholder="Search events">
             <button>Search</button>
-            <a href="login.html" class="button">Logout</a>
+            <a href="db_logout.php" class="button">Logout</a> 
         </div>
     </div>
     
@@ -70,17 +70,17 @@ $conn->close();
     <main>
         <div class="event">
             <a href="LOGGED-ncaa_seating.php"><img src="images/ncaaB.jpg" alt="NCAA"></a>
-            <h3>NCAA Season 100 Men's Basketball Game</h3>
-            <p>Venue: FILOIL ECOOIL CENTRE</p>
-            <p>November 30, 2024 | 12:00 PM</p>
+            <h3>NCAA Season 100 Men's Basketball Game 2</h3>
+            <p>Venue: SMART ARANETA COLISEUM</p>
+            <p>December 07, 2024 | 2:30 PM</p>
             <a href="LOGGED-ncaa_seating.php" class="buy-button">Buy Tickets</a>
         </div>
 
         <div class="event">
             <a href="LOGGED-uaap_seating.php"><img src="images/uaap.jpg" alt="UAAP"></a>
-            <h3>UAAP Season 87 Men's Basketball Game</h3>
-            <p>Venue: SMART ARANETA COLISEUM</p>
-            <p>November 30, 2024 | 6:30 PM</p>
+            <h3>UAAP Season 87 Men's Basketball Game 3</h3>
+            <p>Venue: SM MALL OF ASIA ARENA</p>
+            <p>December 14, 2024 | 2:00 PM</p>
             <a href="LOGGED-uaap_seating.php" class="buy-button">Buy Tickets</a>
         </div>
 
