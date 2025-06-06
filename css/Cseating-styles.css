@@ -2,14 +2,16 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f8ff;
+    background-color: #f4f4f4;
 }
+
+
 
 header {
     display: flex;
     justify-content: space-between; /* Space between left and right sections */
-    align-items: center; /* Vertically centers logo and title */
-    background-color: #003366;
+    align-items: center; /* Vertically centers logo and title #003366*/
+    background-color: #7b241c;
     padding: 10px 20px;
 }
 
@@ -61,11 +63,17 @@ header nav ul li a:hover {
 
 
 
+
+
+
+
+
+
 .subheader {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #5d6d7e;
+    background-color: #ab8d00;   /*#5d6d7e*/
     padding: 10px 20px;
 }
 
@@ -99,7 +107,7 @@ header nav ul li a:hover {
 
 .subheader .search button, .subheader .search a.button {
     padding: 5px 10px;
-    background-color: #003366;
+    background-color: #5d6d7e; /*#003366 */
     color: white;
     text-decoration: none;
     border: none;
@@ -109,119 +117,167 @@ header nav ul li a:hover {
 }
 
 .subheader .search button:hover, .subheader .search a.button:hover {
-    background-color: #2986cc;
+    background-color: #a62d38;
 }
 
-footer {
-    background-color: #003366;
-    color: white;
+.featured {
     text-align: center;
-    padding: 10px 0;
+    color:black; /*#003366 */
 }
-
  
-.container {
+
+main {
     display: flex;
-    width: 90vw; /* Adjust width to 90% of viewport width */
-    height: 90vh; /* Adjust height to 90% of viewport height */
-    background-color: #ffff;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    border-radius: 25px;
-    overflow: hidden;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 2%;
-    margin-bottom: 2%;
+    justify-content: space-around;
+    padding: 20px;
 }
 
-.left {
-    width: 60%;
-    background-color:#99a3a4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.event {
+    background-color: #d5d8dc;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
 }
 
-.left img {
-    max-width: 100%;
-    height:fit-content;
-    border-radius: 15px;
+.event img {
+    width: 100%;
+    height: 350px;
 }
 
-.confirm {
-    width: 60%;
-    background-color:#99a3a4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.event h3 {
+    margin: 15px 0;
+    font-size: 20px;
 }
 
-.confirm img {
-    max-width: 100%;
-    height:fit-content;
-    border-radius: 10px;
-}
-
-.right {
-    width: 40%;
-    padding: 30px; /* Adjust padding to make the form look larger */
-}
-
-.right h2 {
-    font-size: 28px; /* Increase heading size */
-    margin-bottom: 25px;
-    color: #333;
-}
-
-.form-group {
-    margin-bottom: 20px; /* Increase margin for better spacing */
-}
-
-label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
+.event p {
+    font-size: 14px;
     color: #555;
 }
 
-select, input[type="number"] {
-    width: 100%;
-    padding: 12px; /* Increase input size */
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    background-color: #f9f9f9;
+
+.venues {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
 }
 
-.price-display {
-    margin-top: 20px;
-    font-size: 20px; /* Increase font size for price */
-    font-weight: bold;
+.venues img {
+    width: 200px;
+    height: 200px;
+}
+
+.venues h3 {
+    margin: 15px 0;
+    font-size: 20px; 
+}
+
+.venues p {
+    font-size: 14px;
+    color: #555;
+}
+
+
+
+.homep {
+    background-color: #d5d8dc;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+}
+
+.homep img {
+    width: 400px;
+    height: 400px;
+}
+
+.homep h3 {
+    margin: 15px 0;
+    font-size: 20px;
+}
+
+.homep p {
+    font-size: 14px;
+    color: #555;
+}
+
+
+
+.buy-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #a62d38;
+    color: white;
+    text-decoration: none;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.buy-button:hover {
+    background-color: #45a049;
+}
+
+.ads {
+        width: 15%;
+}
+
+.ads div {
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #a62d38;  /*#003366*/
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+} 
+
+
+
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 12px 15px;
+    text-align: center;
+}
+
+th {
+    background-color: #ab8d00;
+    color: #fff;
+}
+
+td {
     color: #333;
 }
 
 
-.actions {
-    display: flex; /* Use flexbox to align buttons */
-    gap: 10px; /* Add spacing between buttons */
-}
 
-
-.btn {
-    display: inline-block;
-    width: auto;
-    padding: 10px 20px;
-    margin-top: 25px;
-    background-color: #003366;
-    color: white;
-    border: none;
+/*
+.venues {
+    color:#003366;
     text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
-.btn:hover {
-    background-color: #0056b3;
+.moa {
+    text-align: left;
 }
+
+img {
+    width: 500px;
+    height: 400px;
+}
+
+*/

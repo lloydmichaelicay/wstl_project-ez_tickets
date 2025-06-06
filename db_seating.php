@@ -3,14 +3,14 @@ session_start();
 include('db_connection.php');
 
 // INSERT INTO ticket_inventory (event_name, total_tickets, tickets_left)
-// VALUES ('NCAA 100 Volleyball', 5500, 5500);
+// VALUES ('title', 5500, 5500);
 
 // Ensure user is logged in
 if (!isset($_SESSION['id'])) {
     die("You must be logged in to book tickets.");
 } 
 
-$user_id = $_SESSION['id'];
+$user_id = $_SESSION['id'];    
 
 // Fetch user's email
 $email_query = "SELECT email FROM user_account WHERE id = ?";

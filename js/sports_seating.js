@@ -27,7 +27,14 @@ const sectionGroups = {
 
     "bleachers": ["Free Seating"],
     "lower-grandstand": ["Free Seating"],
-    "upper-grandstand": ["Free Seating"]
+    "upper-grandstand": ["Free Seating"],
+
+    "jpl-hall": ["Reserved Seating"],
+
+    "mini-theater": ["Free Seating"],
+
+    "arc-events": ["Free Seating"],
+
 };
 
   

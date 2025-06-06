@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LPU Events</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico"> 
+    <link rel="stylesheet" href="css/Cseating-styles.css">
+</head> 
+<body>
+    <header>
+        <div class="logo-title-container">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="EZ Tickets Logo"></a>
+            </div>
+            <div class="title">
+                <b>LPU EZ Events</b>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="LOGGED-index.php">Home</a></li>
+                <li><a href="LOGGED-venues.php">Event Venues</a></li>
+                <li><a href="https://www.facebook.com/LYCESGOManila" target="_blank">LYCESGO</a></li>
+                <li><a href="">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="subheader">
+        <nav>
+            <ul>
+                <li><a href="LOGGED-general.php">General</a></li>
+                <li><a href="LOGGED-cithm.php">CITHM</a></li>
+                <li><a href="LOGGED-cot.php">COT</a></li>
+                <li><a href="LOGGED-graduation.php">Graduation</a></li>
+            </ul>
+        </nav>
+        <div class="search">
+            <input type="text" placeholder="Search events">
+            <button>Search</button>
+            <a href="db_logout.php" class="button">Logout</a>
+        </div>
+    </div>
+
+    <main>
+
+        <div class="container">
+            <!-- Left Side - Seat Plan Image -->
+            <div class="left">
+                <img src="images/bahaghari.jpg" alt="Arena Seat Plan">
+            </div>
+
+        <div class="right">
+            <h2>ARAW NG BAHAGHARI 2025</h2>
+            <h3>May 23, 2025 | JPL HALL OF FREEDOM</h3>
+            <br>
+            <div class="form-group">
+                <label for="location">Venue</label>
+                <select id="location" onchange="previewSections(); pricePreview();" required>
+                    <option value="jpl-hall" data-price="">JPL Hall of Freedom</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="section">Seating</label>
+                <select id="section">
+                    <!-- Nasa JS na yung sections and will be shown dynamically -->
+                </select>
+            </div>
+            
+            <div class="price-display">
+                Total Price: ₱<span id="total-price"></span> (Free)
+            </div>
+            <a href="https://forms.office.com/pages/responsepage.aspx?id=g2tMsVKft02aw8h58vXctN2f5XEdrKFDnnbDUopikI1UNkI2UkFQVEwyQlBKNDQ0VjgxN09NS01KTi4u&route=shorturl" target="_blank">
+                <button class="btn">Proceed to Registration</button>
+            </a>
+        </div>
+    </main>
+
+    <script src="js/concert_seating.js"></script>
+    <footer>
+        <p>&copy; 2025 EZ Tickets. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

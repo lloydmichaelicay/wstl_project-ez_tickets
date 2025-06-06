@@ -1,11 +1,13 @@
 <?php
 session_start();
 
+// INSERT INTO ticket_inventory (event_name, total_tickets, tickets_left)
+// VALUES ('title', 5500, 5500);
 
 $conn = new mysqli('localhost', 'root', '', 'ez_tickets');
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-} 
+}
 
 $sql = " 
     SELECT 
@@ -19,17 +21,17 @@ $sql = "
     GROUP BY ti.event_name, ti.total_tickets
     ORDER BY ti.event_name ASC;
 ";
-
+ 
 
 $result = $conn->query($sql);
-?>
+?> 
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EZ Tickets Admin</title>
+    <title>LPU Events Admin</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -40,19 +42,19 @@ $result = $conn->query($sql);
                 <a href="index.html"><img src="images/logo.png" alt="EZ Tickets Logo"></a>
             </div>
             <div class="title">
-                <b>EZ Tickets</b>
+                <b>LPU Events</b>
             </div>
         </div>  
             <h2 style="color:#ddd">Ticket Inventory Dashboard</h2>
         <nav>
-            <ul>
+            <ul> 
                 <li><a href="index.html" target="_blank">Home</a></li>
                 <li><a href="login.html" target="_blank">Login/Signup</a></li>
             </ul>
         </nav>
-    </header>
+    </header> 
     
-    <h2 style="text-align:center;">Inventory update is not real-time</h2>
+    <h3 style="text-align:center;">Refreshes every 2 mins.</h3>
     <table>
         <thead>
             <tr>

@@ -41,6 +41,15 @@ const sectionGroups = {
     "jokoy-ub-regular": ["401", "402", "403A", "403B", "404", "405", "418", "419", "420A", "420B", "421", "422"],
     "jokoy-general-admission": ["501", "502", "503A", "503B", "504", "505", "506", "517", "518", "519", "520A", "520B", "521", "522"],
 
+    "jpl-hall": ["Reserved Seating"],
+
+    "mini-theater": ["Reserved Seating"],
+
+    "arc-events": ["Free Seating"],
+
+    "marriott-gold": ["Reserved Seating"],
+    "marriott-silver": ["Reserved Seating"]
+
     
 };
  

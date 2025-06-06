@@ -28,6 +28,12 @@ const sectionGroups = {
     "aura-main-floor": ["Row A", "Row B", "Row C", "Row D", "Row E", "Row F"],
     "aura-balcony": ["Row 2A", "Row 2B", "Row 2C", "Row 2D", "Row 2E", "Row 2F"],
 
+    "jpl-hall": ["Reserved Seating"],
+
+    "mini-theater": ["Free Seating"],
+
+    "arc-events": ["Free Seating"]
+
 }; 
  
 // Function to filter sections based on the selected location

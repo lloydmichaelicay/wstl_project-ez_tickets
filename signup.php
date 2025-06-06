@@ -5,8 +5,8 @@
     $age = $_POST['age'] ?? 0;
     $email = $_POST['email'] ?? '';
     $password = $_POST['password'] ?? '';
-    $confirm_password = $_POST['confirm_password'] ?? '';
-    
+    $confirm_password = $_POST['confirm_password'] ?? ''; 
+      
  
     $conn = new mysqli ('localhost','root','','ez_tickets');
 

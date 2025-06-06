@@ -10,8 +10,8 @@ body {
 header {
     display: flex;
     justify-content: space-between; /* Space between left and right sections */
-    align-items: center; /* Vertically centers logo and title */
-    background-color: #003366;
+    align-items: center; /* Vertically centers logo and title #003366*/
+    background-color: #7b241c;
     padding: 10px 20px;
 }
 
@@ -73,7 +73,7 @@ header nav ul li a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #5d6d7e;
+    background-color: #ab8d00;   /*#5d6d7e*/
     padding: 10px 20px;
 }
 
@@ -107,7 +107,7 @@ header nav ul li a:hover {
 
 .subheader .search button, .subheader .search a.button {
     padding: 5px 10px;
-    background-color: #003366;
+    background-color: #5d6d7e; /*#003366 */
     color: white;
     text-decoration: none;
     border: none;
@@ -117,12 +117,12 @@ header nav ul li a:hover {
 }
 
 .subheader .search button:hover, .subheader .search a.button:hover {
-    background-color: #2986cc;
+    background-color: #a62d38;
 }
 
 .featured {
     text-align: center;
-    color:#003366;
+    color:black; /*#003366 */
 }
  
 
@@ -133,7 +133,7 @@ main {
 }
 
 .event {
-    background-color: white;
+    background-color: #d5d8dc;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 30%;
@@ -171,7 +171,7 @@ main {
 
 .venues h3 {
     margin: 15px 0;
-    font-size: 20px;
+    font-size: 20px; 
 }
 
 .venues p {
@@ -182,7 +182,7 @@ main {
 
 
 .homep {
-    background-color: white;
+    background-color: #d5d8dc;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 30%;
@@ -209,7 +209,7 @@ main {
 .buy-button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #2986cc;
+    background-color: #a62d38;
     color: white;
     text-decoration: none;
     margin-top: 15px;
@@ -232,7 +232,7 @@ main {
 }
 
 footer {
-    background-color: #003366;
+    background-color: #a62d38;  /*#003366*/
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -255,7 +255,7 @@ th, td {
 }
 
 th {
-    background-color: #004080;
+    background-color: #ab8d00;
     color: #fff;
 }
 

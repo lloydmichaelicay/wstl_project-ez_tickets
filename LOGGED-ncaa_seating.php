@@ -24,7 +24,7 @@ $conn->close();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EZ Tickets</title>
+    <title>LPU Events</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="css/Cseating-styles.css">
 </head>
@@ -35,7 +35,7 @@ $conn->close();
             <img src="images/logo.png" alt="EZ Tickets Logo">
         </div>
         <div class="title">
-            <b>EZ Tickets</b>
+            <b>LPU EZ Events</b>
         </div>
     </div>
     <h2 style="color:#ddd">Welcome, <?php echo htmlspecialchars($first_name . " " . $last_name); ?>!</h2>
@@ -43,7 +43,7 @@ $conn->close();
         <ul>
             <li><a href="index.php">Home</a></li>
             <li><a href="LOGGED-venues.php">Event Venues</a></li>
-            <li><a href="https://www.facebook.com/philippineconcerts" target="_blank">News</a></li>
+            <li><a href="https://www.facebook.com/LYCESGOManila" target="_blank">LYCESGO</a></li>
             <li><a href="test_2.html">Contact Us</a></li>
         </ul>
     </nav>
@@ -51,9 +51,10 @@ $conn->close();
     <div class="subheader"> 
         <nav>
             <ul>
-                <li><a href="LOGGED-concert.php">Concerts</a></li>
-                <li><a href="LOGGED-sports.php">Sports</a></li>
-                <li><a href="LOGGED-theater.php">Theatre Arts</a></li>
+                <li><a href="LOGGED-general.php">General</a></li>
+                <li><a href="LOGGED-cithm.php">CITHM</a></li>
+                <li><a href="LOGGED-cot.php">COT</a></li>
+                <li><a href="LOGGED-graduation.php">Graduation</a></li>
             </ul>
         </nav>
         <div class="search">
@@ -102,17 +103,17 @@ $conn->close();
                 </div>
                 
                 <div class="form-group">
-                    <label for="quantity">Quantity (5 tickets only per account)</label>
-                    <input type="number" name="ticket_quantity" id="quantity" min="1" max="5" step="1" value="1" onchange="validateQuantity(); updatePrice()">
+                    <label for="quantity">Quantity (Max. 2 tickets only)</label>
+                    <input type="number" name="ticket_quantity" id="quantity" min="1" max="2" step="1" value="1" onchange="validateQuantity(); updatePrice()">
                 </div>
                 
                 <div class="price-display">
-                    Total Price: ₱<span id="total-price">0.00</span> + 2% Service Charge
+                    Total Price: ₱<span id="total-price">0.00</span>
                 </div>
                 
                 <a href=""> 
                     <button class="btn">Reserve Tickets</button>
-                </a>
+                </a> 
 
                 <!-- Hidden input to store calculated price -->
                 <input type="hidden" id="calculated-price" name="total_price">
@@ -122,7 +123,7 @@ $conn->close();
 
     <script src="js/sports_seating.js"></script>
     <footer>
-        <p>&copy; 2024 EZ Tickets. All rights reserved.</p>
+        <p>&copy; 2025 EZ Tickets. All rights reserved.</p>
     </footer>
 </body>
 
